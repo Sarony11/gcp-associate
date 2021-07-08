@@ -6,6 +6,13 @@
   * `gcloud --help`
   * `gcloud list --help`
   * `gcloud config --help`
+### gcloud init
+* Inicializates the glcoud cli configuration
+* Syntax - `gcloud init`
+  * All this configuration is local and doesnt affect to other configurations.
+### gcloud config list
+* List the configuration of gcloud
+* Syntax - `gcloud config list`
 ### gcloud config set
 * Sets the specified property in your active configuration
 * Syntax - `gcloud config set SECTION/PROPERTY VALUE`
