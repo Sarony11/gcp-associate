@@ -20,3 +20,20 @@
   * Cloud BigQuery - bq
   * Cloud Bigtable -cbt
   * Kubernetes - kubectl
+## Instalation and use of Gcloud CLI
+GCloud is part of Google Cloud SDK
+Cloud SDK requires Python
+Instructions to install Cloud SDK -> https://cloud.google.com/sdk/docs/install
+You can also use Gcloud on Cloud Shell
+## Initialize Gcloud CLI
+Cheatsheet -> https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
+`$ gcloud init`
+* Create new configuration
+* Create configuration name
+* Choose account to authenticate
+* Pick project to use
+* Configure default Region and Zone
+* **All this configuration is local** and doesnt affect to other configurations.
+`$ gcloud config list`
+List all the configuration in your gcloud CLI
+
