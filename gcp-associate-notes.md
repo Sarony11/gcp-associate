@@ -37,3 +37,24 @@ Cheatsheet -> https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
 `$ gcloud config list`
 List all the configuration in your gcloud CLI
 
+# Section 6 - Group Instances
+* A managed Instance Group is a group of VMs created using the same instance template.
+  * **Health checks**: Detect applicatiosn failures and if an instance crashes, it lunches another instance.
+  * **Autoscaling**: Increase and drecrease horizontally based on load.
+  * **Load Balacer**: Distribute load among the different instances.
+  * **Regional**: Create instances in multiple zones in the same region, giving higher availability.
+  * **Realises**: Release new versions without downtime.
+    * Rolling updates: Release new versions gradually, once instance at a time.
+    * Canary deployment (A/B): Test new version with a group of instances before releasing across all the instances.
+
+## Creating an instance group
+https://www.youtube.com/watch?v=AXbuyAnGkiQ
+* Instance group is mandatory
+* Configure auto-scaling to automatically adjust number of instances based on load
+  * Minimum number of instances.
+  * Maximum number of instances.
+  * Autoscaling metris: How do you want the scale happens (CPU, Load Balacing or any other metric) using StackDriver.
+    * Cool-down period: How long to wait before looking at auto scaling metrics again?
+    * Scale in controls: Scale down slowly to prevent sudden drop.
+   * Autohealing: Configure health check with initial delay (how long show you wait for you app until first health check?)
+
