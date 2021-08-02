@@ -44,7 +44,7 @@
   * `gcloud config configurations activate prod-configuration` - Activates a configuration called prod-configuration
   * `gcloud config configurations activate prod-configuration` - Describe all the configuration of prod-configuration
 
-## MIG
+## Section 6 - MIG
 ### gcloud compute instance-group managed list
 * List all your instance-groups templates and their options
 * Syntax - `gcloud compute instance-groups managed list`
