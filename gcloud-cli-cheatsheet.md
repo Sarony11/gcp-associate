@@ -76,3 +76,23 @@
   * --max-number-replicas
 * examples
   * gcloud compute instance-groups managed set-autoscaling MIG_NAME --max-num-replicas=10
+
+
+### gcloud compute instance-group managed [resize]
+* Update and resize a MIG
+* Syntax - `gcloud compute instance-groups managed resize MIG_NAME --size=5`
+
+### gcloud compute instance-group managed [recreate-instance]
+* Recreates and already existing instance from a MIG. Used in case a very specific problem is happening and you need manual recreation without affecting the MIG
+* Syntax - `gcloud compute instance-groups managed recreate-instance MIG_NAME --instances=<instance1_name>, <instance2_name>, etc`
+
+
+### gcloud compute instance-group managed [update-instance]
+* Updates an specific instance from a MIG without affecting the whole MIG
+* Syntax - `gcloud compute instance-groups managed update-instance MIG_NAME --instances=<instance1_name>, <instance2_name>, etc`
+  * --minimal-action=(none/refresh/replace/restart)
+  * --most-disruptive-allowed-action=(none/refresh/replace/restart)
+
+### gcloud compute instance-group managed [set-instance-template]
+* Set the template of an specific instance from a MIG
+* Syntax - `gcloud compute instance-groups managed set-instance-template MIG_NAME --template=v2-template
