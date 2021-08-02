@@ -77,7 +77,3 @@ You want to preserve VM state in the group <- Configure Stateful MIG. Recomended
 You want a group of apps with high availability even when hardware/software updates <- Use instance template and enable automatic restart policy and migrate on-host maintenance. These options ensures live migration and automatic restarts.
 You want unhealthy instances to be automatically replaced <- Configure health check on the MIG
 You want to avoid scale problems in a group of apps <- Configure cool-down period/initial delay
-
-## Playing MIG from the CLI
-* Basic command -> gcloud compute instance-groups
-* 
