@@ -58,3 +58,15 @@ https://www.youtube.com/watch?v=AXbuyAnGkiQ
     * Scale in controls: Scale down slowly to prevent sudden drop.
    * Autohealing: Configure health check with initial delay (how long show you wait for you app until first health check?)
 
+## Updating a Managed Instance Group
+* Update strategy
+ * Rolling update - Gradual update instance by instance with the new template.
+ * Canary A/B:
+* Other options
+ * When should the update happen? - Proactive (start now) or Opportunistic (when MIG resizes later)
+ * How should the update happen? - 
+  * Maximum surge: How many instances are added at a time?
+  * Maximum unavailable: How many instances can be offline during update?
+ * **Rolling Restart/replace:** Gradual restart or replace of instaces in the group
+  * **No changes** in the template **BUT replace/restart** existing VMs
+  * You can configure options like maximum unavailability, surge, etc
