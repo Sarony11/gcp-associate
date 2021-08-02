@@ -95,4 +95,22 @@
 
 ### gcloud compute instance-group managed [set-instance-template]
 * Set the template of an specific instance from a MIG
-* Syntax - `gcloud compute instance-groups managed set-instance-template MIG_NAME --template=v2-template
+* Syntax - `gcloud compute instance-groups managed set-instance-template MIG_NAME --template=v2-template`
+
+### gcloud compute instance-group managed [rolling-action] [restart/replace/start-update]
+* Set the template of an specific instance from a MIG
+* Syntax - `gcloud compute instance-groups managed rolling-action [restart/replace/start-update] MIG_NAME ARGUMENT`
+  * restart (start&stop) - reboot instances
+    * --max-surge=number (2) or percentage (15%) (max number of instances updated at a time)
+    * example - `gcloud compute instance-groups managed rolling-action restart my-mig --max-surge=3
+  * replace (delete&recreate) - replace instancesç
+    * Syntax - `gcloud compute instance-groups managed rolling-action replace MIG_NAME ARGUMENT`
+    *  --max-surge=number (2) or percentage (15%) (max number of instances updated at a time)
+    *  --max-unavailable=number (2) or percentage (15%)(max number of instances that can be down for the update)
+    *  --replace-method=recreate/substitute (recreate creates instances with new names. Substitutes reuses names)
+    * example - `gcloud compute instance-groups managed rolling-action restart my-mig --max-surge=3 --max-unavailable=10% --replace-method=substitute
+  * start-update - updates instances to a new template
+    * --version=template=<template_name>
+    * --canary-version=<new_template_name>
+      * --target-size=10%
+    * example - `gcloud compute instance-groups managed rolling-action start-update --version=template=v1-template --canary-version=template=v2-template
