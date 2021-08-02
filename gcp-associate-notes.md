@@ -70,3 +70,14 @@ https://www.youtube.com/watch?v=AXbuyAnGkiQ
  * **Rolling Restart/replace:** Gradual restart or replace of instaces in the group
    * **No changes** in the template **BUT replace/restart** existing VMs
    * You can configure options like maximum unavailability, surge, etc
+
+## MIG Scenarios
+You application to survive Zonal Failures <- Create multiple zone MIG
+You want to preserve VM state in the group <- Configure Stateful MIG. Recomended for statful workloads (database, dataprocessing apps)
+You want a group of apps with high availability even when hardware/software updates <- Use instance template and enable automatic restart policy and migrate on-host maintenance. These options ensures live migration and automatic restarts.
+You want unhealthy instances to be automatically replaced <- Configure health check on the MIG
+You want to avoid scale problems in a group of apps <- Configure cool-down period/initial delay
+
+## Playing MIG from the CLI
+* Basic command -> gcloud compute instance-groups
+* 
