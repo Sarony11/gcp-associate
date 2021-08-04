@@ -77,3 +77,21 @@ You want to preserve VM state in the group <- Configure Stateful MIG. Recomended
 You want a group of apps with high availability even when hardware/software updates <- Use instance template and enable automatic restart policy and migrate on-host maintenance. These options ensures live migration and automatic restarts.
 You want unhealthy instances to be automatically replaced <- Configure health check on the MIG
 You want to avoid scale problems in a group of apps <- Configure cool-down period/initial delay
+
+# Section 7 - Cloud Balancing
+* Distributes traffic across instances of an application in single region or multiple regions
+* Fully distributed, software defined managed service
+* Importante featured
+  * Health check - Route to healthy instances
+  * Auto scaling
+  * Global load balacing with single anycast IP
+  * Also supports internal load balancing
+* When to use it?
+  * High availability
+  * Auto scaling
+  * Resiliency
+
+## Understanding HTTP, HTTPS, UDP and TCP
+Layer 3 (Network)     ->
+Layer 4 (Transport)   ->
+Layer 7 (Application) ->
