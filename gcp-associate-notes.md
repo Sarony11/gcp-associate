@@ -112,3 +112,17 @@ Most applications typically communicate at application layer
 
 However other applications need high performance, and they communicate directly in network layer.
 * Gamming applications, live video streaming use UDP.
+
+## Load Balancer Terminology in GCP
+Create LB ->   https://www.youtube.com/watch?v=0qXM7kHlk1U
+* **Backend**: Group of endpoints that receive traffic from GC load balancer (example: instance groups)
+* **Fronted**: Specify an IP address, port and protocol. This IP address is the fronted IP for your client request.
+* **Host and path rules**: (For https load balancing) - Define rules redirecting the traffic to different backends.
+  * **Based on path** - domain.com/a vs domain.com/b
+  * **Based on host** - a.domain.com vs b.domain.com
+  * **Based on HTTP headers** - Methods (POST, GET, etc).
+
+## Scenarios
+https://cloud.google.com/load-balancing/images/choose-lb.svg
+* Application exposed to internet though LB: HTTPS recomended
+* LB to VM instance though internal Google network: HTTPS preferred but HTTP is also ok.
