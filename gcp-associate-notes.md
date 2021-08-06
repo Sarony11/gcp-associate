@@ -95,3 +95,17 @@ You want to avoid scale problems in a group of apps <- Configure cool-down perio
 * Layer 3 (Network)     -> IP
 * Layer 4 (Transport)   -> TCP, TLS UDP
 * Layer 7 (Application) -> HTTP, HTTPS, SMTP
+
+* Network layer: IP (Internet Protocol): Transfer bytes. Unrealiable.
+* Transport Layer:
+  * TCP (Transmission Control): Reliability over performance.
+  * TLS (Transport Layer Security): Secure TCP. Reliability and security over performance.
+  * UDP (User Datagram Protocol): Performance over reliability.
+* Application Layer:
+  * HTTP (Hypertext Transfer Protocol): Stateless request response cycle.
+  * HTTPS (Secure HTTP)
+  * SMTP, FTP, SSH, etc.
+
+Most applications typically communicate at application layer
+* Web apps/REST API (HTTP/HTTPS), Email Server (SMTP), File Transfers (FTP)
+* All these applications use TCP/TLS at network layer
