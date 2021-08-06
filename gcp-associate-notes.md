@@ -92,6 +92,6 @@ You want to avoid scale problems in a group of apps <- Configure cool-down perio
   * Resiliency
 
 ## Understanding HTTP, HTTPS, UDP and TCP
-Layer 3 (Network)     ->
-Layer 4 (Transport)   ->
-Layer 7 (Application) ->
+* Layer 3 (Network)     -> IP
+* Layer 4 (Transport)   -> TCP, TLS UDP
+* Layer 7 (Application) -> HTTP, HTTPS, SMTP
