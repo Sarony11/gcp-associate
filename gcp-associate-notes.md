@@ -109,3 +109,6 @@ You want to avoid scale problems in a group of apps <- Configure cool-down perio
 Most applications typically communicate at application layer
 * Web apps/REST API (HTTP/HTTPS), Email Server (SMTP), File Transfers (FTP)
 * All these applications use TCP/TLS at network layer
+
+However other applications need high performance, and they communicate directly in network layer.
+* Gamming applications, live video streaming use UDP.
