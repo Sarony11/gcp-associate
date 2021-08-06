@@ -124,5 +124,3 @@ Create LB ->   https://www.youtube.com/watch?v=0qXM7kHlk1U
 
 ## Scenarios
 https://cloud.google.com/load-balancing/images/choose-lb.svg
-* Application exposed to internet though LB: HTTPS recomended
-* LB to VM instance though internal Google network: HTTPS preferred but HTTP is also ok.
