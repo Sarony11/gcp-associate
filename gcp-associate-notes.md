@@ -131,3 +131,16 @@ https://cloud.google.com/load-balancing/images/choose-lb.svg
 * **App Engine** - Build higly scalable applications on a fully managed plataform using open and familiar languages and tools - PaaS, CaaS, Serverless
 * **Cloud Functions** - Build event driven applicatiosn using simple, single-purpose functions - FaaS, Serverless
 * **Cloud Run** - Develop and deploy highly scalable containerized applications. Does NOT need kubernetes cluster - CaaS, Serverless
+
+# Section 9 - App Engine
+* **Standard:** Applications run in language specific sandboxes
+  * Complete isolation from OS/Disk/Other Apps
+  * **V1:** Java, Python, PHP, Go (old versions)
+    * Restricted network access
+    * Only white-listed extensions and libraries are allowed
+  * **V2:** Java, Python, PHP, Node.js, Ruby, Go
+    * Full network access and no restrictions on languages extensions
+* **Flexible:** Applications instances run within Docker containers
+  * Makes use of Compute Engine virtual machines
+  * Support ANY runtime
+  * Provides access to background processes and local disk
