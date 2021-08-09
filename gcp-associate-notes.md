@@ -124,3 +124,10 @@ Create LB ->   https://www.youtube.com/watch?v=0qXM7kHlk1U
 
 ## Scenarios
 https://cloud.google.com/load-balancing/images/choose-lb.svg
+
+# Section 8 - Managed Services in GCP
+* **Compute Engine** - High-performance and general purpose VMs that scale globally - IaaS
+* **Google Kubernetes Engine** - Orchestrate containerized microservices on Kubernetes. Needs advanced cluster configuration and monitoring - CaaS
+* **App Engine** - Build higly scalable applications on a fully managed plataform using open and familiar languages and tools - PaaS, CaaS, Serverless
+* **Cloud Functions** - Build event driven applicatiosn using simple, single-purpose functions - FaaS, Serverless
+* **Cloud Run** - Develop and deploy highly scalable containerized applications. Does NOT need kubernetes cluster - CaaS, Serverless
