@@ -144,3 +144,13 @@ https://cloud.google.com/load-balancing/images/choose-lb.svg
   * Makes use of Compute Engine virtual machines
   * Support ANY runtime
   * Provides access to background processes and local disk
+
+## App Engine Component Hierarchy
+* **Application:** One App per Project
+* **Service(s):** Multiple microservices or App components
+  * You can have multiple services in a single application
+  * Each service can have different settings
+* **Version(s):** Each version associated with code and configuration
+  * Each version can run in one or more instances
+  * Multiple version can co-exist
+  * Options to rollback and split traffic
